@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Chart Editor</title>
+    <title>Bar Graph Editor</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         canvas {
             max-width: 100%;
             height: auto;
-            border: 1px solid #ddd;
+            border: 1px solid #ddd; /* Add a border for better visibility */
         }
         body {
             display: flex;
@@ -22,10 +22,15 @@
         div {
             margin-bottom: 10px;
         }
+        /* Add this to your existing styles.css file or create a new one */
+
+
+
     </style>
 </head>
 <body>
-
+    <a href="../index.html" class="l">Home</a>
+    <link rel="stylesheet" href="../link.css">
 <div>
     <label for="labelInput">Labels:</label>
     <input type="text" id="labelInput" placeholder="Enter labels, comma-separated">
@@ -34,12 +39,20 @@
     <label for="dataInput">Data:</label>
     <input type="text" id="dataInput" placeholder="Enter data values, comma-separated">
 </div>
-<button onclick="updateChart()">Update Line Chart</button>
+<div>
+    <label for="barColor">Bar Color:</label>
+    <input type="color" id="barColor" value="#4CAF50">
+</div>
+<button onclick="updateGraph()">Update Bar Graph</button>
 <button onclick="downloadAsHTML()">Download as HTML</button>
-<button onclick="downloadAsLineGraph()">Download as .line-grap</button>
-<input type="file" accept=".line-grap" onchange="importLineGraphFile()" multiple>
-<canvas id="myLineChart" width="600" height="400"></canvas>
+<button onclick="downloadAsBarGraph()">Download as .bar-grap</button>
+<input type="file" accept=".bar-grap" onchange="importBarGraphFile()">
+<canvas id="myBarGraph" width="600" height="400"></canvas>
 
-<script src="line-graph.js"></script><script src="/function.js"></script>
+<script src="bar-graph.js"></script>
+<script src="/function.js"></script>
 </body>
 </html>
+
+
+
